@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malam Gala Hard Rock CaPRiSK 2026 - Slide & Emcee System</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Rock Salt, Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,700&family=Oswald:wght@500;700&family=Rock+Salt&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- HTML to DOCX Converter Library for In-Browser Word Export -->
+  <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            rock: ['"Oswald"', 'sans-serif'],
+            script: ['"Rock Salt"', 'cursive'],
+            marker: ['"Permanent Marker"', 'cursive'],
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          colors: {
+            hardrock: {
+              gold: '#F59E0B',
+              goldLight: '#FDE047',
+              goldDark: '#B45309',
+              red: '#DC2626',
+              crimson: '#991B1B',
+              dark: '#0B0B0E',
+              darkGray: '#16161D',
+              plate: '#20202A',
+              neon: '#EF4444'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Hard Rock Textured Background & Light Beams */
+    body {
+      background-color: #0b0b0f;
+      color: #f3f4f6;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+    }
+
+    .metal-gradient {
+      background: radial-gradient(circle at 50% 30%, #1f1f2e 0%, #0c0c12 70%, #050508 100%);
+    }
+
+    .gold-foil-text {
+      background: linear-gradient(135deg, #FFF6BD 0%, #F59E0B 45%, #D97706 75%, #FDE68A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4));
+    }
+
+    .red-fire-text {
+      background: linear-gradient(135deg, #FEE2E2 0%, #EF4444 50%, #991B1B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(239, 68, 68, 0.5));
+    }
+
+    .chrome-border {
+      border: 1px solid rgba(255, 215, 0, 0.28);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.15), inset 0 0 15px rgba(245, 158, 11, 0.08);
+    }
+
+    .speaker-grid {
+      background-image: radial-gradient(#272733 1.5px, transparent 1.5px);
+      background-size: 8px 8px;
+    }
+
+    .spotlight-left {
+      position: absolute;
+      top: -150px;
+      left: 10%;
+      width: 250px;
+      height: 800px;
+      background: linear-gradient(to bottom, rgba(245, 158, 11, 0.22), transparent 85%);
+      transform: rotate(25deg);
+      pointer-events: none;
+      filter: blur(35px);
+      animation: sweepLeft 8s ease-in-out infinite alternate;
+    }
+
+    .spotlight-right {
+      position: absolute;
+      top: -150px;
+      right: 10%;
+      width: 250px;
+      height: 800px;
+      background: linear-gradient(to bottom, rgba(239, 68, 68, 0.2), transparent 85%);
+      transform: rotate(-25deg);
+      pointer-events: none;
+      filter: blur(35px);
+      animation: sweepRight 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes sweepLeft {
+      0% { transform: rotate(18deg) translateX(-20px); }
+      100% { transform: rotate(32deg) translateX(30px); }
+    }
+
+    @keyframes sweepRight {
+      0% { transform: rotate(-18deg) translateX(20px); }
+      100% { transform: rotate(-32deg) translateX(-30px); }
+    }
+
+    .slide-enter {
+      animation: slideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96) translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* Custom Scrollbar for Emcee Script */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111118;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #475569;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+
+    /* Soundwave bars animation */
+    .bar {
+      display: inline-block;
+      width: 4px;
+      background: #f59e0b;
+      margin: 0 1px;
+      border-radius: 2px;
+      animation: bounceWave 1.2s ease-in-out infinite alternate;
+    }
+    .bar:nth-child(2) { animation-delay: 0.15s; height: 18px; }
+    .bar:nth-child(3) { animation-delay: 0.3s; height: 26px; }
+    .bar:nth-child(4) { animation-delay: 0.45s; height: 32px; }
+    .bar:nth-child(5) { animation-delay: 0.2s; height: 20px; }
+    .bar:nth-child(6) { animation-delay: 0.5s; height: 14px; }
+    .bar:nth-child(7) { animation-delay: 0.1s; height: 24px; }
+
+    @keyframes bounceWave {
+      0% { transform: scaleY(0.4); opacity: 0.6; }
+      100% { transform: scaleY(1.3); opacity: 1; }
+    }
+
+    #slideViewport {
+      transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+      transform-origin: center center;
+    }
+
+    /* Screen height & width optimization for 95% coverage */
+    .projector-card {
+      width: 95vw;
+      max-width: 95vw;
+      height: calc(100vh - 130px);
+      max-height: calc(100vh - 130px);
+    }
+
+    @media (max-width: 768px) {
+      .projector-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: calc(100vh - 140px);
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex flex-col justify-between metal-gradient">
+
+  <!-- Ambient Stage Spotlights -->
+  <div class="spotlight-left"></div>
+  <div class="spotlight-right"></div>
+  
+  <!-- Canvas for celebration confetti -->
+  <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
+
+  <!-- Top Floating HUD: Controls & Event Quick Info -->
+  <header class="relative z-30 px-3 md:px-5 py-2.5 flex items-center justify-between border-b border-yellow-500/20 bg-black/75 backdrop-blur-md">
+    <div class="flex items-center space-x-2 md:space-x-3">
+      <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gradient-to-tr from-yellow-600 to-red-600 flex items-center justify-center shadow-lg shadow-yellow-500/20 border border-yellow-400 shrink-0">
+        <i class="fa-solid fa-guitar text-yellow-100 text-base md:text-lg"></i>
+      </div>
+      <div>
+        <h1 class="text-xs sm:text-sm md:text-base font-bold tracking-wider font-rock text-yellow-400 uppercase leading-tight">
+          Malam Gala Hard Rock CaPRiSK 2026
+        </h1>
+        <p class="text-[11px] text-gray-400 hidden sm:block">
+          <i class="fa-regular fa-calendar-days text-yellow-500 mr-1"></i> Jumaat, 2 Oktober 2026 &nbsp;|&nbsp; 
+          <i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Royale Bintang, Janda Baik
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation Shortcuts, Zoom & Action Tools -->
+    <div class="flex items-center space-x-1.5 md:space-x-2">
+      <!-- SFX Soundboard Pill with Hotkey Badges -->
+      <div class="hidden lg:flex items-center bg-zinc-900/90 border border-zinc-700/60 rounded-full px-2.5 py-1 space-x-1 text-xs">
+        <span class="text-gray-400 font-semibold mr-1"><i class="fa-solid fa-volume-high text-yellow-400 mr-1"></i>SFX:</span>
+        <button onclick="playSFX('drumroll')" class="hover:text-yellow-400 px-2 py-0.5 rounded hover:bg-zinc-800 transition flex items-center gap-1" title="Tekan kekunci [D]">
+          <span>🥁 Drum</span>
+          <kbd class="bg-black/70 px-1 py-0.2 text-[10px] text-yellow-400 rounded border border-zinc-700">D</kbd>
+        </button>
+        <button onclick="playSFX('rockRiff')" class="hover:text-yellow-400 px-2 py-0.5 rounded hover:bg-zinc-800 transition flex items-center gap-1" title="Tekan kekunci [R] atau [G]">
+          <span>🎸 Riff</span>
+          <kbd class="bg-black/70 px-1 py-0.2 text-[10px] text-yellow-400 rounded border border-zinc-700">R</kbd>
+        </button>
+        <button onclick="playSFX('cheer')" class="hover:text-yellow-400 px-2 py-0.5 rounded hover:bg-zinc-800 transition flex items-center gap-1" title="Tekan kekunci [A] atau [S]">
+          <span>👏 Sorak</span>
+          <kbd class="bg-black/70 px-1 py-0.2 text-[10px] text-yellow-400 rounded border border-zinc-700">A</kbd>
+        </button>
+      </div>
+
+      <!-- Zoom In & Out Controller (+ and -) -->
+      <div class="flex items-center bg-zinc-900 border border-zinc-700/80 rounded-lg p-0.5 text-xs shadow-md">
+        <button onclick="zoomOut()" class="px-2 py-1 text-gray-300 hover:text-yellow-400 hover:bg-zinc-800 rounded transition" title="Kecilkan Saiz (Kekunci -)">
+          <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </button>
+        <button onclick="resetZoom()" id="zoomLabel" class="px-1.5 py-1 text-[11px] font-mono font-bold text-yellow-400 hover:bg-zinc-800 rounded transition" title="Set Semula 100% (Kekunci 0)">
+          100%
+        </button>
+        <button onclick="zoomIn()" class="px-2 py-1 text-gray-300 hover:text-yellow-400 hover:bg-zinc-800 rounded transition" title="Besarkan Saiz (Kekunci +)">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+      </div>
+
+      <!-- Emcee Script Drawer Toggle -->
+      <button onclick="toggleEmceeDrawer()" class="px-2.5 sm:px-3.5 py-1.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white text-xs font-semibold rounded-lg shadow-lg shadow-red-700/30 flex items-center gap-1.5 transition transform active:scale-95">
+        <i class="fa-solid fa-microphone-lines"></i>
+        <span class="hidden sm:inline">Teks Emcee</span>
+      </button>
+
+      <!-- Slide List Quick Jump Dropdown -->
+      <select id="slideJumpSelect" onchange="jumpToSlide(parseInt(this.value))" class="bg-zinc-900 border border-zinc-700 text-yellow-400 text-xs rounded-lg px-2 py-1.5 focus:outline-none focus:border-yellow-400 cursor-pointer max-w-[120px] sm:max-w-[200px]">
+        <!-- Generated Dynamically -->
+      </select>
+
+      <!-- Fullscreen Toggle Button -->
+      <button onclick="toggleFullscreen()" class="p-1.5 sm:p-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-gray-300 hover:text-white rounded-lg transition" title="Skrin Penuh (F11 / F)">
+        <i class="fa-solid fa-expand text-xs sm:text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN SLIDES VIEWPORT -->
+  <main class="relative z-10 flex-1 w-full overflow-y-auto sm:overflow-hidden flex items-center justify-center p-1 sm:p-2 md:p-3">
+    <div id="slideViewport" class="w-[96vw] max-w-[96vw] h-full flex items-center justify-center mx-auto">
+      <!-- SLIDE 1: BACKDROP UTAMA (WELCOME) -->
+      <section id="slide-0" class="slide-item w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 slide-enter overflow-y-auto">
+        <div class="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
+          
+          <!-- Soundwave graphics -->
+          <div class="flex items-center gap-1 mb-2 opacity-90 scale-90 sm:scale-100">
+            <span class="bar" style="height:16px"></span>
+            <span class="bar" style="height:26px"></span>
+            <span class="bar" style="height:38px"></span>
+            <span class="bar" style="height:50px"></span>
+            <span class="bar" style="height:32px"></span>
+            <span class="bar" style="height:18px"></span>
+            <span class="mx-3 text-xs sm:text-sm uppercase tracking-widest text-yellow-400 font-bold">★ CaPRiSK ANNUAL DINNER ★</span>
+            <span class="bar" style="height:18px"></span>
+            <span class="bar" style="height:32px"></span>
+            <span class="bar" style="height:50px"></span>
+            <span class="bar" style="height:38px"></span>
+            <span class="bar" style="height:26px"></span>
+            <span class="bar" style="height:16px"></span>
+          </div>
+
+          <!-- Main Logo Emblem -->
+          <div class="relative my-2 sm:my-4 flex justify-center items-center">
+            <div class="w-28 h-28 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full border-4 border-yellow-500/80 bg-zinc-900/90 flex items-center justify-center shadow-[0_0_60px_rgba(245,158,11,0.4)] relative">
+              <i class="fa-solid fa-crown text-yellow-400 text-xl sm:text-2xl absolute -top-4 sm:-top-5"></i>
+              <!-- Wings Graphic via FontAwesome -->
+              <div class="flex items-center justify-center gap-2">
+                <i class="fa-solid fa-feather-pointed -rotate-45 text-yellow-500/70 text-3xl sm:text-5xl"></i>
+                <i class="fa-solid fa-guitar text-yellow-400 text-5xl sm:text-7xl drop-shadow-[0_0_20px_#f59e0b]"></i>
+                <i class="fa-solid fa-feather-pointed scale-x-[-1] -rotate-45 text-yellow-500/70 text-3xl sm:text-5xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h2 class="text-xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-widest text-zinc-300 font-rock">
+            MALAM GALA
+          </h2>
+          <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-rock tracking-tight uppercase gold-foil-text my-1 leading-none">
+            HARD ROCK
+          </h1>
+          <h3 class="text-2xl sm:text-4xl md:text-6xl font-black font-rock text-white tracking-widest">
+            CaPRiSK 2026
+          </h3>
+
+          <!-- Details Badge Bar -->
+          <div class="mt-4 sm:mt-6 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 w-full max-w-4xl px-2">
+            <div class="bg-black/70 border border-yellow-500/50 rounded-2xl p-3 sm:p-4 backdrop-blur-sm shadow-xl">
+              <div class="text-yellow-400 font-bold text-base sm:text-xl font-rock uppercase flex items-center justify-center gap-2">
+                <i class="fa-solid fa-calendar-day"></i> JUMAAT, 2 OKTOBER 2026
+              </div>
+              <p class="text-xs sm:text-sm text-gray-300 mt-1">Tarikh rasmi penganjuran majlis makan malam tahunan</p>
+            </div>
+            <div class="bg-black/70 border border-red-500/50 rounded-2xl p-3 sm:p-4 backdrop-blur-sm shadow-xl">
+              <div class="text-red-400 font-bold text-base sm:text-xl font-rock uppercase flex items-center justify-center gap-2">
+                <i class="fa-solid fa-hotel"></i> ROYALE BINTANG, JANDA BAIK
+              </div>
+              <p class="text-xs sm:text-sm text-gray-300 mt-1">Lokasi eksklusif & indah meraikan semua warga CaPRiSK</p>
+            </div>
+          </div>
+
+          <div class="mt-4 inline-block bg-red-950/60 border border-red-500/70 px-6 py-2 rounded-full text-xs sm:text-base text-red-200 tracking-wider">
+            <i class="fa-solid fa-bolt text-yellow-400 mr-2"></i> TEMA DINNER: <strong>HARD ROCK (GAH & PENUH GAYA)</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: AGENDA / ATUR CARA MAJLIS -->
+      <section id="slide-1" class="slide-item hidden w-full h-full flex flex-col justify-center items-center p-2 sm:p-4 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-4 sm:p-7 backdrop-blur-md shadow-2xl flex flex-col justify-between max-h-[88vh] overflow-y-auto">
+          <div class="flex items-center justify-between border-b border-zinc-800 pb-2 mb-4 shrink-0">
+            <div>
+              <span class="text-xs sm:text-sm font-semibold text-yellow-500 uppercase tracking-widest">Tentatif Program</span>
+              <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-rock uppercase text-white">ATUR CARA MALAM GALA</h2>
+            </div>
+            <div class="text-right hidden sm:block">
+              <span class="text-xs text-gray-400">Tema Malam:</span>
+              <span class="block text-red-400 font-bold font-rock text-xl">HARD ROCK GLAM</span>
+            </div>
+          </div>
+
+          <!-- Timeline Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm flex-1">
+            <!-- 8:00 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800 hover:border-yellow-500/50 transition">
+              <span class="bg-yellow-500/20 text-yellow-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-yellow-500/30">8.00 PM</span>
+              <div>
+                <h4 class="font-bold text-white text-sm sm:text-base">Ketibaan Para Tetamu & Warga CaPRiSK</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Pendaftaran, sesi Hard Rock Photo Booth & alunan instrumental rock santai.</p>
+              </div>
+            </div>
+
+            <!-- 8:15 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-red-500/50 hover:border-red-400 transition">
+              <span class="bg-red-500/20 text-red-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-red-500/40">8.15 PM</span>
+              <div>
+                <h4 class="font-bold text-red-200 text-sm sm:text-base">Ketibaan VVIP Kehormat</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Ketibaan YBhg. TKPK(P) & Pengarah Bahagian Perkembangan Perubatan KKM.</p>
+              </div>
+            </div>
+
+            <!-- 8:20 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+              <span class="bg-yellow-500/20 text-yellow-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-yellow-500/30">8.20 PM</span>
+              <div>
+                <h4 class="font-bold text-white text-sm sm:text-base">Kata Aluan & Pembukaan Rasmi</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Ucapan pengacara majlis & pembukaan penuh bersemangat.</p>
+              </div>
+            </div>
+
+            <!-- 8:30 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+              <span class="bg-yellow-500/20 text-yellow-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-yellow-500/30">8.30 PM</span>
+              <div>
+                <h4 class="font-bold text-white text-sm sm:text-base">Majlis Sanjungan Budi: Jasamu Dikenang</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Meraikan persaraan Matron Normala binti Salim & penyerahan cenderahati ingatan.</p>
+              </div>
+            </div>
+
+            <!-- 8:45 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+              <span class="bg-yellow-500/20 text-yellow-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-yellow-500/30">8.45 PM</span>
+              <div>
+                <h4 class="font-bold text-white text-sm sm:text-base">Sambutan Hari Jadi Rockers (Jul - Dis)</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Pemberian hadiah peribadi, acara potong kek & sesi fotografi warga Julai-Disember.</p>
+              </div>
+            </div>
+
+            <!-- 9:00 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+              <span class="bg-yellow-500/20 text-yellow-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-yellow-500/30">9.00 PM</span>
+              <div>
+                <h4 class="font-bold text-white text-sm sm:text-base">Bacaan Doa Makan & Jamuan Malam</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Bacaan doa oleh EN. SAHALUDIN BIN SHARIF & jamuan hidangan lazat.</p>
+              </div>
+            </div>
+
+            <!-- 9:15 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-yellow-500/40">
+              <span class="bg-amber-500/20 text-amber-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-amber-500/30">9.15 PM</span>
+              <div>
+                <h4 class="font-bold text-amber-300 text-sm sm:text-base">Anugerah Sesi 1: Sporting Event</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Penyampaian 4 Hamper gergasi bagi pemenang aktiviti sukan CaPRiSK.</p>
+              </div>
+            </div>
+
+            <!-- 9:35 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-yellow-500/40">
+              <span class="bg-amber-500/20 text-amber-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-amber-500/30">9.35 PM</span>
+              <div>
+                <h4 class="font-bold text-amber-300 text-sm sm:text-base">Anugerah Sesi 2: Hard Rock Underdog</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Pengiktirafan 7 figura hebat dengan gelaran khas Rockers Sejati.</p>
+              </div>
+            </div>
+
+            <!-- 10:00 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-yellow-500/40">
+              <span class="bg-amber-500/20 text-amber-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-amber-500/30">10.00 PM</span>
+              <div>
+                <h4 class="font-bold text-amber-300 text-sm sm:text-base">Anugerah Sesi 3: King & Queen of the Night</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Penyampaian 2 trofi khas busana paling gah, bergaya & berkarisma rock.</p>
+              </div>
+            </div>
+
+            <!-- 10:15 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-yellow-500/40">
+              <span class="bg-amber-500/20 text-amber-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-amber-500/30">10.15 PM</span>
+              <div>
+                <h4 class="font-bold text-amber-300 text-sm sm:text-base">Anugerah Sesi 4: Star of CaPRiSK</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Kemuncak anugerah! Pengumuman eksklusif Bintang Terulung 2026.</p>
+              </div>
+            </div>
+
+            <!-- 10:30 PM -->
+            <div class="flex items-start space-x-3 bg-zinc-900/80 p-3 rounded-xl border border-red-500/40 md:col-span-2">
+              <span class="bg-red-500/20 text-red-400 font-bold font-rock text-sm sm:text-base px-2.5 py-1 rounded-md min-w-[75px] text-center border border-red-500/40">10.30 PM</span>
+              <div class="flex-1 flex flex-col md:flex-row md:items-center justify-between">
+                <div>
+                  <h4 class="font-bold text-white text-sm sm:text-base">Cenderahati VVIP & Sesi Bergambar Beramai-ramai</h4>
+                  <p class="text-xs sm:text-sm text-gray-400">Tanda kenang-kenangan kepada Pengarah & TKPK(P), penutup & potret memori abadi.</p>
+                </div>
+                <span class="text-xs font-semibold text-yellow-400 bg-yellow-950/70 px-3 py-1 rounded border border-yellow-500/40 mt-2 md:mt-0 self-start md:self-auto">★ Grand Finale ★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: KETIBAAN VVIP & UCAPAN PEMBUKAAN -->
+      <section id="slide-2" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-6 sm:p-12 backdrop-blur-lg shadow-2xl relative">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black font-rock font-black px-6 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest shadow-md">
+            ★ Sambutan Protokol & Aluan ★
+          </div>
+          <p class="text-sm sm:text-lg font-rock tracking-widest text-gray-400 uppercase mt-2">Selamat Datang Ke</p>
+          <h2 class="text-3xl sm:text-5xl md:text-6xl font-black font-rock text-white uppercase mt-1 mb-6">
+            KETIBAAN TETAMU KEHORMAT VVIP
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 text-left max-w-6xl mx-auto">
+            <div class="bg-gradient-to-b from-zinc-900 to-zinc-950 p-6 rounded-2xl border-2 border-yellow-500/40 flex items-center space-x-5 shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-user-tie text-yellow-400 text-3xl"></i>
+              </div>
+              <div>
+                <span class="text-xs sm:text-sm font-bold text-yellow-400 uppercase tracking-wider block">Timbalan Ketua Pengarah Kesihatan (Perubatan)</span>
+                <h3 class="text-lg sm:text-2xl font-bold text-white leading-snug">Datuk Dr. Mohd Azman bin Yacob</h3>
+                <p class="text-xs sm:text-sm text-gray-400 mt-0.5">Kementerian Kesihatan Malaysia</p>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-b from-zinc-900 to-zinc-950 p-6 rounded-2xl border-2 border-yellow-500/40 flex items-center space-x-5 shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-user-doctor text-yellow-400 text-3xl"></i>
+              </div>
+              <div>
+                <span class="text-xs sm:text-sm font-bold text-yellow-400 uppercase tracking-wider block">Pengarah Bahagian Perkembangan Perubatan</span>
+                <h3 class="text-lg sm:text-2xl font-bold text-white leading-snug">Dr. Nor Hayati binti Ibrahim</h3>
+                <p class="text-xs sm:text-sm text-gray-400 mt-0.5">Kementerian Kesihatan Malaysia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Greeting Pantun Frame -->
+          <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-black/70 border border-zinc-800 text-center max-w-4xl mx-auto">
+            <p class="text-sm sm:text-lg italic text-yellow-200">
+              "Gitar dipetik rentak bergema, Rock klasik menawan kalbu;<br>
+              Kehadiran Tuan Puan seri bersama, Menjadikan majlis bersinar selalu."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: MAJLIS SANJUNGAN BUDI (MATRON NORMALA BINTI SALIM) -->
+      <section id="slide-3" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border-2 border-amber-500/50 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl relative">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-600 to-yellow-500 text-black font-rock font-black px-6 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest shadow-md">
+            Jasamu Dikenang, Abadi Di Hati
+          </div>
+
+          <div class="my-3">
+            <span class="text-xs sm:text-sm uppercase tracking-widest text-yellow-400 font-semibold">Meraikan Persaraan Yang Diraikan</span>
+            <h1 class="text-3xl sm:text-6xl md:text-7xl font-black font-rock text-white tracking-wide uppercase mt-1">
+              MATRON NORMALA BINTI SALIM
+            </h1>
+            <p class="text-base sm:text-xl text-gray-300 italic font-sans mt-2 max-w-4xl mx-auto">
+              "Terima Kasih Atas Segala Curahan Keringat, Bimbingan & Kasih Sayang Sepanjang Perkhidmatan"
+            </p>
+          </div>
+
+          <!-- Tribute Gift Sources -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 text-left max-w-5xl mx-auto">
+            <div class="bg-black/60 border border-amber-500/40 p-5 rounded-2xl text-center hover:border-yellow-400 transition shadow-lg">
+              <div class="w-14 h-14 mx-auto rounded-full bg-amber-500/20 text-yellow-400 flex items-center justify-center mb-2">
+                <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+              </div>
+              <h4 class="font-bold text-white text-base sm:text-lg">Kelab Kebajikan</h4>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">Hadiah kenang-kenangan ikhlas daripada Kelab Kebajikan CaPRiSK</p>
+            </div>
+
+            <div class="bg-black/60 border border-amber-500/40 p-5 rounded-2xl text-center hover:border-yellow-400 transition shadow-lg">
+              <div class="w-14 h-14 mx-auto rounded-full bg-amber-500/20 text-yellow-400 flex items-center justify-center mb-2">
+                <i class="fa-solid fa-users-gear text-2xl"></i>
+              </div>
+              <h4 class="font-bold text-white text-base sm:text-lg">Unit CaPRiSK</h4>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">Cenderahati penghargaan khas daripada rakan-rakan sepasukan Unit CaPRiSK</p>
+            </div>
+
+            <div class="bg-black/60 border border-amber-500/40 p-5 rounded-2xl text-center hover:border-yellow-400 transition shadow-lg">
+              <div class="w-14 h-14 mx-auto rounded-full bg-amber-500/20 text-yellow-400 flex items-center justify-center mb-2">
+                <i class="fa-solid fa-user-nurse text-2xl"></i>
+              </div>
+              <h4 class="font-bold text-white text-base sm:text-lg">Barisan Jururawat</h4>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">Tanda kasih dan ingatan tulus daripada seluruh keluarga Jururawat</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/80 p-4 rounded-xl border border-zinc-800 text-xs sm:text-sm text-gray-300 max-w-4xl mx-auto">
+            <span class="text-yellow-400 font-bold">Atur cara segmen:</span> Ucapan Penghargaan &bull; Penyampaian Cenderahati CaPRiSK &bull; Sesi Potong Kek / Fotografi Bersama
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: SAMBUTAN HARI JADI (JULAI - DISEMBER) -->
+      <section id="slide-4" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-pink-500/40 rounded-3xl p-6 sm:p-10 backdrop-blur-lg shadow-2xl relative">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 text-white font-rock font-black px-6 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest shadow-md">
+            ★ Rock Birthday Bash ★
+          </div>
+
+          <div class="flex items-center justify-center space-x-4 mb-2">
+            <i class="fa-solid fa-cake-candles text-4xl sm:text-5xl text-yellow-400 animate-bounce"></i>
+            <h1 class="text-3xl sm:text-6xl md:text-7xl font-black font-rock uppercase text-white tracking-wider">
+              SAMBUTAN HARI JADI
+            </h1>
+            <i class="fa-solid fa-compact-disc text-4xl sm:text-5xl text-red-500 animate-spin" style="animation-duration: 6s;"></i>
+          </div>
+
+          <p class="text-base sm:text-xl text-yellow-300 font-semibold">
+            Meraikan Rakan Sekerja CaPRiSK Lahir Antara Bulan:
+          </p>
+          <div class="text-2xl sm:text-4xl md:text-5xl font-black font-rock tracking-widest text-white mt-1 mb-4">
+            JULAI &bull; OGOS &bull; SEPTEMBER &bull; OKTOBER &bull; NOVEMBER &bull; DISEMBER
+          </div>
+
+          <!-- Highlight boxes: Gift giving, Cake cutting, Photo session -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-5 text-left max-w-5xl mx-auto">
+            <div class="bg-black/60 p-5 rounded-2xl border border-pink-500/30 flex items-center space-x-4">
+              <span class="text-3xl sm:text-4xl">🎁</span>
+              <div>
+                <h4 class="font-bold text-white text-base sm:text-lg">Pemberian Hadiah</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Pemberian cenderahati eksklusif untuk setiap birthday boy & girl!</p>
+              </div>
+            </div>
+
+            <div class="bg-black/60 p-5 rounded-2xl border border-yellow-500/30 flex items-center space-x-4">
+              <span class="text-3xl sm:text-4xl">🎂</span>
+              <div>
+                <h4 class="font-bold text-white text-base sm:text-lg">Acara Potong Kek</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Nyanyian lagu hari jadi versi Rock & tiup lilin bersama-sama.</p>
+              </div>
+            </div>
+
+            <div class="bg-black/60 p-5 rounded-2xl border border-red-500/30 flex items-center space-x-4">
+              <span class="text-3xl sm:text-4xl">📸</span>
+              <div>
+                <h4 class="font-bold text-white text-base sm:text-lg">Sesi Fotografi</h4>
+                <p class="text-xs sm:text-sm text-gray-400">Abadikan momen manis dan ceria di atas pentas gala.</p>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="triggerConfetti()" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-600 to-yellow-500 text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:opacity-95 shadow-lg shadow-pink-600/30 transition transform hover:scale-105">
+            🎉 Tabur Konfeti Hari Jadi! (Kekunci C)
+          </button>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: BACAAN DOA MAKAN & JAMUAN MAKAN MALAM -->
+      <section id="slide-5" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-6 sm:p-12 backdrop-blur-md shadow-2xl">
+          <div class="w-20 h-20 mx-auto rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center mb-4">
+            <i class="fa-solid fa-utensils text-yellow-400 text-3xl"></i>
+          </div>
+
+          <h3 class="text-xs sm:text-sm font-bold text-yellow-500 uppercase tracking-widest">Keberkatan Rezeki Bersama</h3>
+          <h1 class="text-3xl sm:text-6xl md:text-7xl font-black font-rock text-white uppercase my-2">
+            BACAAN DOA MAKAN
+          </h1>
+          <p class="text-base sm:text-2xl text-gray-300 font-medium">
+            Dipimpin dengan penuh rasa takzim oleh:
+          </p>
+          <div class="inline-block my-4 px-8 py-3 rounded-2xl bg-zinc-900 border-2 border-yellow-500/50 text-yellow-300 font-rock font-bold text-2xl sm:text-4xl shadow-xl">
+            EN. SAHALUDIN BIN SHARIF
+          </div>
+
+          <hr class="border-zinc-800 my-6 max-w-4xl mx-auto">
+
+          <div class="space-y-2 max-w-3xl mx-auto">
+            <h2 class="text-2xl sm:text-4xl font-extrabold font-rock text-red-400 uppercase">
+              JAMUAN MAKAN MALAM BERMULA
+            </h2>
+            <p class="text-sm sm:text-lg text-gray-300">
+              Jemput menjamu selera hidangan istimewa Royale Bintang. Teruskan bergembira sambil menantikan 4 sesi anugerah gilang-gemilang sepanjang malam!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: ANUGERAH SESI 1 - SPORTING EVENT (4 HAMPER) -->
+      <section id="slide-6" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl">
+          <span class="text-xs sm:text-sm font-bold text-yellow-400 uppercase tracking-widest bg-yellow-950/80 px-5 py-1.5 rounded-full border border-yellow-500/40">
+            Sesi Anugerah 1
+          </span>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black font-rock text-white uppercase mt-3 mb-2">
+            PEMENANG SPORTING EVENT
+          </h1>
+          <p class="text-sm sm:text-lg text-gray-300">
+            Penghargaan Semangat Kesukanan & Ketangkasan Warga CaPRiSK &bull; 4 Hamper Eksklusif
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 my-8 max-w-6xl mx-auto">
+            <!-- Hamper 1 -->
+            <div class="bg-black/60 border-2 border-yellow-500/40 rounded-2xl p-5 flex flex-col items-center hover:border-yellow-400 transition transform hover:-translate-y-1 shadow-lg">
+              <div class="text-5xl my-2">🥇</div>
+              <h4 class="font-bold text-yellow-400 font-rock text-xl sm:text-2xl">JUARA</h4>
+              <p class="text-xs sm:text-sm text-gray-400">Hamper Gergasi Emas</p>
+              <div class="mt-3 w-full bg-zinc-900 py-2 px-3 rounded-lg text-xs sm:text-sm text-gray-200 border border-zinc-800">
+                Pasukan Terhebat
+              </div>
+            </div>
+
+            <!-- Hamper 2 -->
+            <div class="bg-black/60 border-2 border-gray-400/40 rounded-2xl p-5 flex flex-col items-center hover:border-gray-300 transition transform hover:-translate-y-1 shadow-lg">
+              <div class="text-5xl my-2">🥈</div>
+              <h4 class="font-bold text-gray-200 font-rock text-xl sm:text-2xl">NAIB JUARA</h4>
+              <p class="text-xs sm:text-sm text-gray-400">Hamper Perak</p>
+              <div class="mt-3 w-full bg-zinc-900 py-2 px-3 rounded-lg text-xs sm:text-sm text-gray-200 border border-zinc-800">
+                Pasukan Mantap
+              </div>
+            </div>
+
+            <!-- Hamper 3 -->
+            <div class="bg-black/60 border-2 border-amber-700/40 rounded-2xl p-5 flex flex-col items-center hover:border-amber-600 transition transform hover:-translate-y-1 shadow-lg">
+              <div class="text-5xl my-2">🥉</div>
+              <h4 class="font-bold text-amber-500 font-rock text-xl sm:text-2xl">TEMPAT KE-3</h4>
+              <p class="text-xs sm:text-sm text-gray-400">Hamper Gangsa</p>
+              <div class="mt-3 w-full bg-zinc-900 py-2 px-3 rounded-lg text-xs sm:text-sm text-gray-200 border border-zinc-800">
+                Pasukan Bersemangat
+              </div>
+            </div>
+
+            <!-- Hamper 4 -->
+            <div class="bg-black/60 border-2 border-red-500/40 rounded-2xl p-5 flex flex-col items-center hover:border-red-400 transition transform hover:-translate-y-1 shadow-lg">
+              <div class="text-5xl my-2">🎖</div>
+              <h4 class="font-bold text-red-400 font-rock text-xl sm:text-2xl">PASUKAN SPORTING</h4>
+              <p class="text-xs sm:text-sm text-gray-400">Hamper Semangat Kental</p>
+              <div class="mt-3 w-full bg-zinc-900 py-2 px-3 rounded-lg text-xs sm:text-sm text-gray-200 border border-zinc-800">
+                Paling Bertenaga
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-gray-400 italic">
+            *Diumumkan secara langsung semasa majlis makan malam berlangsung.
+          </p>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: ANUGERAH SESI 2 - HARD ROCK UNDERDOG EDITION (7 AWARDS) -->
+      <section id="slide-7" class="slide-item hidden w-full h-full flex flex-col justify-center items-center p-2 sm:p-4 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-4 sm:p-6 backdrop-blur-lg shadow-2xl max-h-[88vh] overflow-y-auto">
+          <div class="text-center mb-3">
+            <span class="text-xs sm:text-sm font-bold text-red-400 uppercase tracking-widest bg-red-950/80 px-5 py-1 rounded-full border border-red-500/40">
+              Sesi Anugerah 2
+            </span>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-black font-rock text-white uppercase mt-1">
+              ANUGERAH KHAS: HARD ROCK UNDERDOG EDITION
+            </h1>
+            <p class="text-xs sm:text-base text-yellow-400">
+              Pengiktirafan buat tunjang kekuatan sejati yang beraksi cemerlang di balik tabir
+            </p>
+          </div>
+
+          <!-- 7 Award Recipients Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 text-left text-xs sm:text-sm">
+            <!-- 1. DR ZULAIKA -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#1 Underdog Rocker</span>
+                <i class="fa-solid fa-guitar text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">DR ZULAIKA BINTI ZOLKIPLI</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Unsung Lead Guitarist</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Steady, berimpak tinggi, dan sentiasa memberikan persembahan 'solo' yang mantap di balik tabir tanpa perlu terjerit-jerit menuntut perhatian.
+              </p>
+            </div>
+
+            <!-- 2. PN SAIZA -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#2 Underdog Rocker</span>
+                <i class="fa-solid fa-drum text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">PN. SAIZA BINTI MAT YUSOF</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Rhythm Section Icon</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Nadi yang mengekalkan tempo pejabat. Tanpa bunyi bising, beliau memastikan kualiti kerja sentiasa <em>in sync</em> dan tidak pernah terbabas.
+              </p>
+            </div>
+
+            <!-- 3. DR CHAN LEE FANG -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#3 Underdog Rocker</span>
+                <i class="fa-solid fa-wand-magic-sparkles text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">DR. CHAN LEE FANG</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Backstage Virtuoso</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Pakar strategi senyap. Kepakaran dan ketelitian beliau adalah 'magis' sebenar yang membuatkan setiap projek berjalan lancar.
+              </p>
+            </div>
+
+            <!-- 4. EN MOHD SHAHIDI -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#4 Underdog Rocker</span>
+                <i class="fa-solid fa-shield-halved text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">EN. MOHD. SHAHIDI BIN MUHAMMAD YUSOF</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Iron Bassist</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Kunci kestabilan pasukan. Sentiasa tenang menghadapi tekanan dan menjadi tulang belakang yang mengukuhkan asas kerja setiap hari.
+              </p>
+            </div>
+
+            <!-- 5. EN SAHALUDIN -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#5 Underdog Rocker</span>
+                <i class="fa-solid fa-bolt-lightning text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">EN. SAHALUDIN BIN SHARIF</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Acoustic Powerhouse</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Rendah diri tetapi penuh tenaga. Kerja keras beliau tidak selalu dipromosikan, tetapi hasilnya sentiasa memberikan impak mendalam kepada pasukan.
+              </p>
+            </div>
+
+            <!-- 6. EN MOHD ROMZA -->
+            <div class="bg-black/70 border border-yellow-500/40 p-4 rounded-2xl hover:border-yellow-400 transition group shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-yellow-500 uppercase tracking-wider">#6 Underdog Rocker</span>
+                <i class="fa-solid fa-sliders text-yellow-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">EN. MOHD ROMZA BIN HASSAN</h3>
+              <div class="text-xs sm:text-sm font-bold text-yellow-300 font-rock italic mt-0.5">The Master Sound Engineer</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Pengawal keadaan yang efisien. Beliau menyelesaikan pelbagai masalah teknikal dan operasi di belakang tabir sebelum orang lain sempat menyedarinya.
+              </p>
+            </div>
+
+            <!-- 7. EN AHMAD FAUZI -->
+            <div class="bg-black/70 border border-red-500/50 p-4 rounded-2xl hover:border-red-400 transition group md:col-span-2 lg:col-span-3 shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-red-400 uppercase tracking-wider">#7 Underdog Rocker</span>
+                <i class="fa-solid fa-anchor text-red-400 text-base"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">EN. AHMAD FAUZI BIN MANSOR</h3>
+              <div class="text-xs sm:text-sm font-bold text-red-300 font-rock italic mt-0.5">The Heavy Metal Anchor</div>
+              <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                <strong class="text-gray-200">Gelaran:</strong> Tahan lasak dan tidak pernah mengeluh. Sentiasa bersedia menggalas tugasan paling berat dengan dedikasi tinggi demi kejayaan bersama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: ANUGERAH SESI 3 - KING & QUEEN OF THE NIGHT (2 TROFI) -->
+      <section id="slide-8" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl relative">
+          <span class="text-xs sm:text-sm font-bold text-yellow-400 uppercase tracking-widest bg-yellow-950/80 px-5 py-1.5 rounded-full border border-yellow-500/40">
+            Sesi Anugerah 3
+          </span>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black font-rock text-white uppercase mt-2 mb-1">
+            KING & QUEEN OF THE NIGHT
+          </h1>
+          <p class="text-xs sm:text-base text-gray-300 mb-6">
+            Penghargaan Buat Busana Hard Rock Paling Gah, Berkarisma & Menggegar Malam Gala! (2 Trofi Khas)
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4 max-w-5xl mx-auto">
+            <!-- KING CARD -->
+            <div class="bg-black/70 border-2 border-yellow-500/50 rounded-2xl p-6 flex flex-col items-center relative overflow-hidden group shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-yellow-500/20 border-2 border-yellow-400 flex items-center justify-center mb-3">
+                <i class="fa-solid fa-crown text-yellow-400 text-4xl"></i>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-black font-rock text-yellow-400 uppercase">KING OF THE NIGHT</h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">Ikon Jejaka Hard Rock Paling Gah</p>
+              
+              <!-- Interactive Live Reveal Field -->
+              <div id="kingNameDisplay" class="mt-5 p-3.5 bg-zinc-900 border border-dashed border-yellow-500/50 rounded-xl w-full text-center">
+                <span class="text-xs sm:text-sm text-gray-400 font-mono tracking-wider italic">Pemenang akan diumumkan secara langsung!</span>
+              </div>
+              <button onclick="revealWinner('king')" class="mt-4 text-xs sm:text-sm bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 px-4 py-1.5 rounded-lg border border-yellow-500/40 transition">
+                <i class="fa-solid fa-sparkles mr-1"></i> Buka / Edit Nama Pemenang
+              </button>
+            </div>
+
+            <!-- QUEEN CARD -->
+            <div class="bg-black/70 border-2 border-pink-500/50 rounded-2xl p-6 flex flex-col items-center relative overflow-hidden group shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-pink-500/20 border-2 border-pink-400 flex items-center justify-center mb-3">
+                <i class="fa-solid fa-gem text-pink-400 text-4xl"></i>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-black font-rock text-pink-400 uppercase">QUEEN OF THE NIGHT</h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-1">Ratu Hard Rock Paling Berkarisma & Anggun</p>
+              
+              <!-- Interactive Live Reveal Field -->
+              <div id="queenNameDisplay" class="mt-5 p-3.5 bg-zinc-900 border border-dashed border-pink-500/50 rounded-xl w-full text-center">
+                <span class="text-xs sm:text-sm text-gray-400 font-mono tracking-wider italic">Pemenang akan diumumkan secara langsung!</span>
+              </div>
+              <button onclick="revealWinner('queen')" class="mt-4 text-xs sm:text-sm bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 px-4 py-1.5 rounded-lg border border-pink-500/40 transition">
+                <i class="fa-solid fa-sparkles mr-1"></i> Buka / Edit Nama Pemenang
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: ANUGERAH SESI 4 - STAR OF CAPRISK -->
+      <section id="slide-9" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border-2 border-yellow-400 rounded-3xl p-6 sm:p-12 backdrop-blur-xl shadow-[0_0_70px_rgba(245,158,11,0.3)] relative">
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 via-amber-500 to-yellow-500 text-black font-rock font-black px-6 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest shadow-xl">
+            <i class="fa-solid fa-star"></i> Kemuncak Anugerah Terulung <i class="fa-solid fa-star"></i>
+          </div>
+
+          <div class="my-4">
+            <div class="text-6xl sm:text-8xl my-3 text-yellow-400 drop-shadow-[0_0_30px_#f59e0b]">
+              <i class="fa-solid fa-trophy animate-pulse"></i>
+            </div>
+            <h1 class="text-4xl sm:text-7xl md:text-8xl font-black font-rock text-white tracking-tight uppercase leading-none">
+              STAR OF CaPRiSK
+            </h1>
+            <p class="text-base sm:text-2xl text-yellow-300 font-semibold mt-2">
+              "The Ultimate Legend of CaPRiSK 2026"
+            </p>
+            <p class="text-xs sm:text-base text-gray-400 max-w-xl mx-auto mt-2">
+              Pengiktirafan paling berprestij buat individu yang menyinari CaPRiSK dengan dedikasi luar biasa dan kepimpinan inspirasi.
+            </p>
+          </div>
+
+          <!-- Dynamic Reveal Box -->
+          <div id="starCapriskDisplay" class="bg-black/80 border border-yellow-500/60 p-6 rounded-2xl my-5 flex flex-col items-center justify-center max-w-2xl mx-auto shadow-2xl">
+            <span class="text-xs sm:text-sm text-yellow-400 font-mono tracking-widest">★ KEPUTUSAN RASMI ★</span>
+            <h2 id="starWinnerName" class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+              [ Keputusan Rasmi Bakal Diumumkan! ]
+            </h2>
+          </div>
+
+          <div class="flex items-center justify-center gap-3">
+            <button onclick="revealWinner('star')" class="px-6 sm:px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black font-rock font-black rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-lg transition transform hover:scale-105">
+              <i class="fa-solid fa-unlock-keyhole mr-1"></i> Buka Tirai Pemenang
+            </button>
+            <button onclick="triggerConfetti(); playSFX('rockRiff')" class="px-4 sm:px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-yellow-400 font-bold rounded-xl text-xs sm:text-sm border border-zinc-700 transition">
+              🎸 Riff & Konfeti
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: CENDERAHATI PENGHARGAAN VVIP -->
+      <section id="slide-10" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-yellow-500/40 rounded-3xl p-6 sm:p-10 backdrop-blur-md shadow-2xl relative">
+          <span class="text-xs sm:text-sm font-bold text-yellow-400 uppercase tracking-widest bg-yellow-950/80 px-5 py-1.5 rounded-full border border-yellow-500/40">
+            Tanda Penghargaan Tulus
+          </span>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black font-rock text-white uppercase mt-2 mb-2">
+            PENYAMPAIAN CENDERAHATI VVIP
+          </h1>
+          <p class="text-xs sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
+            Sebagai tanda setinggi-tinggi penghargaan dan terima kasih atas kesudian meluangkan masa memeriahkan Malam Gala Hard Rock CaPRiSK 2026.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4 text-left max-w-5xl mx-auto">
+            <div class="bg-black/70 border border-yellow-500/40 p-6 rounded-2xl flex items-center space-x-5 hover:border-yellow-400 transition shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-award text-yellow-400 text-4xl"></i>
+              </div>
+              <div>
+                <span class="text-[11px] sm:text-xs font-bold text-yellow-400 uppercase tracking-wider block">Cenderahati Kehormat 1</span>
+                <h3 class="text-base sm:text-xl font-bold text-white">YBhg. Timbalan Ketua Pengarah Kesihatan (Perubatan) KKM</h3>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1">Datuk Dr. Mohd Azman bin Yacob</p>
+              </div>
+            </div>
+
+            <div class="bg-black/70 border border-yellow-500/40 p-6 rounded-2xl flex items-center space-x-5 hover:border-yellow-400 transition shadow-xl">
+              <div class="w-20 h-20 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-gift text-yellow-400 text-4xl"></i>
+              </div>
+              <div>
+                <span class="text-[11px] sm:text-xs font-bold text-yellow-400 uppercase tracking-wider block">Cenderahati Kehormat 2</span>
+                <h3 class="text-base sm:text-xl font-bold text-white">YBrs. Dr. Nor Hayati binti Ibrahim</h3>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1">Pengarah Bahagian Perkembangan Perubatan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 p-4 bg-zinc-900/70 rounded-xl border border-zinc-800 text-xs sm:text-sm text-gray-400 max-w-3xl mx-auto">
+            Dipersilakan wakil kepimpinan CaPRiSK untuk menyempurnakan sesi penyampaian cenderahati kenang-kenangan.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: TIRAI PENUTUP & SESI BERGAMBAR BERAMAI-RAMAI -->
+      <section id="slide-11" class="slide-item hidden w-full h-full flex flex-col justify-center items-center text-center p-3 sm:p-6 overflow-y-auto">
+        <div class="w-full max-w-[95vw] bg-zinc-950/90 border border-red-500/40 rounded-3xl p-6 sm:p-12 backdrop-blur-md shadow-2xl">
+          <div class="text-5xl sm:text-7xl text-yellow-400 mb-2">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <h2 class="text-xs sm:text-base font-bold tracking-widest text-yellow-400 uppercase font-rock">
+            Memori Indah Bersama
+          </h2>
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-rock text-white uppercase my-2">
+            SESI BERGAMBAR BERAMAI-RAMAI
+          </h1>
+          <p class="text-sm sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+            Dipersilakan semua tetamu kehormat, warga kerja CaPRiSK dan hadirin sekalian untuk bersama-sama ke hadapan pentas bagi sesi fotografi kenang-kenangan!
+          </p>
+
+          <div class="inline-block p-5 rounded-2xl bg-black/70 border border-zinc-800 text-center max-w-lg">
+            <p class="text-base sm:text-xl font-rock text-red-400 tracking-wide">
+              "ROCK ON CaPRiSK! JUMPA LAGI DI TAHUN HADAPAN!"
+            </p>
+            <p class="text-xs sm:text-sm text-gray-400 mt-1">Semoga ukhuwah terus terjalin erat dan sentiasa berjiwa kental.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- BOTTOM CONTROLLER BAR -->
+  <footer class="relative z-30 px-4 py-3 bg-black/70 backdrop-blur-md border-t border-zinc-800 flex items-center justify-between">
+    <!-- Slide indicator -->
+    <div class="flex items-center space-x-2 text-xs text-gray-300">
+      <span class="font-bold text-yellow-400 font-rock text-sm" id="slideIndexLabel">Slide 1 / 12</span>
+      <span class="text-zinc-600">|</span>
+      <span id="currentSlideTitle" class="text-gray-400 hidden sm:inline-block">Backdrop Utama</span>
+    </div>
+
+    <!-- Central Navigation Controls -->
+    <div class="flex items-center space-x-2">
+      <button onclick="prevSlide()" class="p-2 md:px-4 md:py-2 bg-zinc-900 hover:bg-zinc-800 text-gray-200 hover:text-white rounded-xl border border-zinc-700 text-xs font-semibold flex items-center gap-1 transition">
+        <i class="fa-solid fa-chevron-left"></i>
+        <span class="hidden md:inline">Sebelum</span>
+      </button>
+
+      <!-- Dots preview -->
+      <div id="slideDotsContainer" class="hidden md:flex items-center space-x-1.5 px-2">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <button onclick="nextSlide()" class="p-2 md:px-4 md:py-2 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-black rounded-xl font-rock font-bold text-xs flex items-center gap-1 transition shadow-md">
+        <span class="hidden md:inline">Seterusnya</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Quick Help & Shortcuts -->
+    <div class="flex items-center space-x-2 text-xs">
+      <button onclick="openHelpModal()" class="px-2.5 py-1 text-gray-400 hover:text-white bg-zinc-900 rounded-lg border border-zinc-700/60" title="Bantuan Pintasan">
+        <i class="fa-solid fa-keyboard mr-1"></i> <span class="hidden sm:inline">Pintasan</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- EMCEE SCRIPT DRAWER (Teks Pengacara Majlis Santai & Berpantun) -->
+  <aside id="emceeDrawer" class="fixed top-0 right-0 h-full w-full sm:w-[480px] lg:w-[560px] bg-zinc-950/95 border-l border-yellow-500/30 backdrop-blur-xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    <!-- Header -->
+    <div class="p-4 border-b border-zinc-800 flex items-center justify-between bg-black/50">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 flex items-center justify-center border border-red-500/40">
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+        <div>
+          <h3 class="font-rock font-bold text-base text-yellow-400 uppercase">Teks Pengacara Majlis (Emcee)</h3>
+          <p class="text-[11px] text-gray-400">Mod Santai, Ceria, Bertenaga & Penuh Pantun Rock</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <!-- Download Word (.docx) Button -->
+        <button onclick="downloadEmceeDocx()" class="px-2.5 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold rounded-lg shadow-md flex items-center gap-1.5 transition transform active:scale-95" title="Muat turun fail .docx untuk disunting dalam Microsoft Word">
+          <i class="fa-solid fa-file-word"></i>
+          <span>Muat Turun .docx</span>
+        </button>
+        <button onclick="toggleEmceeDrawer()" class="text-gray-400 hover:text-white text-lg p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Script Content with Auto-Highlight based on current slide -->
+    <div id="emceeScriptContainer" class="flex-1 overflow-y-auto p-4 space-y-6 text-sm text-gray-200">
+      
+      <!-- Script for Slide 1 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="0">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 1: BACKDROP UTAMA (PRA-MAJLIS)</span>
+          <button onclick="jumpToSlide(0)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Muzik instrumental Hard Rock berkumandang. Tetamu sedang berkumpul & bergambar.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Testing 1, 2, 3... Rockers semua sihat ke tu?! Selamat petang dan salam sejahtera kepada semua warga CaPRiSK yang hebat bergaya malam ini! Wah, tengok pakaian masing-masing... ada leather jacket, bandana, rantai chrome... memang gah dan luar biasa tema Hard Rock kita di Royale Bintang, Janda Baik malam ni!"</p>
+          <div class="p-2 rounded bg-black/40 border-l-2 border-yellow-500 italic text-yellow-200">
+            "Bukan sebarang muzik digubah,<br>
+            Alunan rock menggegarkan dewan;<br>
+            Malam Gala CaPRiSK penuh meriah,<br>
+            Wajah berseri semua rakan taulan!"
+          </div>
+          <p>"Sila ambil tempat masing-masing dan jangan lupa serbu sudut photobooth kita!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 2 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="1">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 2: ATUR CARA MAJLIS</span>
+          <button onclick="jumpToSlide(1)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Paparkan atur cara ringkas kepada hadirin.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Hadirin sekalian, malam ini kita ada barisan acara yang cukup padat dan mengujakan! Bermula dengan menyambut tetamu kehormat VVIP, kita akan meraikan sanjungan budi persaraan Matron Normala binti Salim, sambutan hari jadi warga CaPRiSK Julai-Disember, doa makan oleh EN. SAHALUDIN BIN SHARIF, dan sepanjang dinner nanti, kita ada 4 sesi anugerah!"</p>
+          <p>"7 anugerah Hard Rock Underdog, 4 hamper sporting event, 2 trofi King & Queen, dan kemuncaknya... Bintang Utama, <em>Star of CaPRiSK</em>! Jadi duduk tenang, nikmati muzik dan santapan!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 3 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="2">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 3: KETIBAAN VVIP & UCAPAN PEMBUKAAN</span>
+          <button onclick="jumpToSlide(2)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: VVIP melangkah masuk ke dewan. Muzik perarakan / riff rock bergema.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee (Protokol Santai):</strong> "Mengumumkan ketibaan Yang Berbahagia Datuk Dr. Mohd Azman bin Yacob, Timbalan Ketua Pengarah Kesihatan (Perubatan) KKM, bersama Yang Berusaha Dr. Nor Hayati binti Ibrahim,Pengarah Bahagian Perkembangan Perubatan KKM masuk ke dalam dewan!"</p>
+          <div class="p-2 rounded bg-black/40 border-l-2 border-red-500 italic text-red-200">
+            "Daun pandan disimpul kemas,<br>
+            Harum baunya semerbak desa;<br>
+            Tetamu kehormat hadir beralas emas,<br>
+            Sambutlah salam penuh mesra."
+          </div>
+          <p>"Bagi pihak seluruh warga CaPRiSK, kami merakamkan setinggi-tinggi penghargaan dan ucapan selamat datang ke Royale Bintang, Janda Baik!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 4 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="3">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 4: SANJUNGAN BUDI MATRON NORMALA BINTI SALIM</span>
+          <button onclick="jumpToSlide(3)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Nada suara bertukar lembut, penuh emosi dan penghargaan.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Sidang hadirin, ada pertemuan pastinya ada perpisahan, namun jasa yang ditabur akan kekal terpahat di lubuk sanubari. Majlis dengan penuh takzim membawakan segmen <em>Sanjungan Budi: Jasamu Abadi</em> khas buat insan tersayang kita, <strong>Matron Normala binti Salim</strong> sempena persaraan beliau."</p>
+          <div class="p-2 rounded bg-black/40 border-l-2 border-yellow-500 italic text-yellow-200">
+            "Tuai padi antara masak,<br>
+            Esok jangan layu-layuan;<br>
+            Budi Matron terpahat kemas,<br>
+            Sentiasa jadi ingatan zaman."
+          </div>
+          <p>"Dipersilakan Matron Normala ke hadapan pentas untuk menerima tanda ingatan kasih daripada Kelab Kebajikan CaPRiSK, daripada Unit beliau, dan daripada seluruh barisan jururawat kita!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 5 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="4">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 5: SAMBUTAN HARI JADI (JULAI - DISEMBER)</span>
+          <button onclick="jumpToSlide(4)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Nada ceria, beat kekal energetik. Muzik Happy Birthday Rock!</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Dari rasa sebak, kita sambung pula dengan kebahagiaan! Kepada sesiapa yang menyambut hari lahir antara bulan Julai hingga Disember... angkat tangan tinggi-tinggi! Malam ini kita raikan anda semua dalam satu pentas!"</p>
+          <p>"Dipersilakan semua 'birthday stars' Julai hingga Disember untuk naik ke pentas bagi sesi penyerahan hadiah istimewa, memotong kek hari jadi bersama-sama, dan sesi fotografi!"</p>
+          <p><em>(Ajak hadirin menyanyi lagu Happy Birthday versi rancak!)</em></p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 6 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="5">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 6: BACAAN DOA MAKAN OLEH EN. SAHALUDIN BIN SHARIF</span>
+          <button onclick="jumpToSlide(5)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Suasana tenang sebelum jamuan makan malam dimulakan.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Bau aroma hidangan dari tadi dah buat perut berbunyi solo drum kit! Namun sebelum tangan menjamah hidangan lazat di Royale Bintang ini, marilah kita memohon keberkatan dan kelapangan rezeki daripada Yang Maha Esa."</p>
+          <p>"Majlis dengan sukacitanya mempersilakan <strong>Encik Din</strong> untuk memimpin bacaan doa makan. Dipersilakan."</p>
+          <p><em>(Selepas doa):</em> "Amin Ya Rabbal Alamin. Terima kasih EN. SAHALUDIN BIN SHARIF. Selamat menjamu selera semua warga rockers CaPRiSK!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 7 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="6">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 7: ANUGERAH SESI 1 (SPORTING EVENT - 4 HAMPER)</span>
+          <button onclick="jumpToSlide(6)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Semasa makan, adakan sesi anugerah pertama.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Sambil mulut mengunyah rendang dan lauk-pauk, mata kita tumpukan ke hadapan pentas! Tiba masanya untuk <strong>Sesi Anugerah Pertama: Pemenang Acara Sukan (Sporting Event)</strong>!"</p>
+          <p>"Sebanyak 4 buah hamper gergasi yang penuh dengan goodies menanti para jaguh padang kita! Siapakah pasukannya? Mari kita umumkan..."</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 8 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="7">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 8: ANUGERAH SESI 2 (HARD ROCK UNDERDOG EDITION)</span>
+          <button onclick="jumpToSlide(7)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Baca setiap nama dan penerangan gelaran dengan penuh rasa bangga dan penghayatan!</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Hadirin sekalian, ini antara anugerah paling ikonik malam ini: <strong>Anugerah Khas Hard Rock Underdog Edition</strong>! Pengiktirafan kepada tulang belakang yang jarang menuntut mikrofon, tapi tanpanya konsert takkan jalan!"</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-300">
+            <li><strong>Dr. Zulaika binti Zolkipli:</strong> <em>The Unsung Lead Guitarist</em> – Steady, berimpak tinggi, persembahan solo mantap tanpa perlu terjerit-jerit menuntut perhatian!</li>
+            <li><strong>Pn. Saiza binti Mat Yusof:</strong> <em>The Rhythm Section Icon</em> – Nadi tempo pejabat, sentiasa in-sync dan kerja tak pernah terbabas!</li>
+            <li><strong>Dr. Chan Lee Fang:</strong> <em>The Backstage Virtuoso</em> – Pakar strategi senyap, sentuhannya adalah 'magis' sebenar kelancaran projek!</li>
+            <li><strong>En. Mohd. Shahidi bin Muhammad Yusof:</strong> <em>The Iron Bassist</em> – Kunci kestabilan pasukan, tenang menghadapi tekanan dan asas kerja harian!</li>
+            <li><strong>En. Sahaludin bin Sharif:</strong> <em>The Acoustic Powerhouse</em> – Rendah diri tapi impaknya berdentum dalam pasukan!</li>
+            <li><strong>En. Mohd Romza bin Hassan:</strong> <em>The Master Sound Engineer</em> – Pengawal keadaan efisien, selesaikan isu sebelum orang lain sempat sedar!</li>
+            <li><strong>En. Ahmad Fauzi bin Mansor:</strong> <em>The Heavy Metal Anchor</em> – Tahan lasak tak pernah mengeluh, galas tugasan terberat demi pasukan!</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Script for Slide 9 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="8">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 9: ANUGERAH SESI 3 (KING & QUEEN OF THE NIGHT)</span>
+          <button onclick="jumpToSlide(8)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Saspen! Gunakan butang Drum Roll.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Siapa yang paling rock, paling stailo, paling menonjol aura bintangnya malam ini?! Kita ada dua trofi eksklusif untuk <strong>King of the Night</strong> dan <strong>Queen of the Night</strong>!"</p>
+          <div class="p-2 rounded bg-black/40 border-l-2 border-pink-500 italic text-pink-200">
+            "Berbaju kulit berantai tembaga,<br>
+            Gaya melangkah umpama diva;<br>
+            King dan Queen kita cari bersama,<br>
+            Siapakah gerangan yang bakal bertakhta?"
+          </div>
+          <p><em>(Bunyikan drumroll!)</em> "Pemenang King of the Night disandang oleh... dan Queen of the Night disandang oleh...!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 10 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="9">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 10: ANUGERAH SESI 4 (STAR OF CAPRISK)</span>
+          <button onclick="jumpToSlide(9)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Kemuncak tertinggi acara! Sorakan hadirin.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Inilah detik yang paling dinanti-nantikan! Kemuncak segala kemuncak! Anugerah <strong>Star of CaPRiSK 2026</strong>!"</p>
+          <p>"Anugerah ini diberikan kepada individu serba boleh, berwibawa tinggi, disayangi rakan-rakan dan menjadi inspirasi seluruh jabatan!"</p>
+          <p><em>(Drumroll panjang...)</em> "Dan penerima anugerah terunggul STAR OF CaPRiSK 2026 jatuh kepada... [Buka Tirai Pemenang]! Tahniah dan teruskan menyinari CaPRiSK!"</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 11 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="10">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 11: CENDERAHATI VVIP</span>
+          <button onclick="jumpToSlide(10)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Protokol penyerahan cenderahati kepada TKPK(P) & Pengarah.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Sebagai tanda ingatan tulus dan penghargaan tidak terhingga, majlis mempersilakan wakil penganjur untuk menyampaikan cenderahati khas kepada Yang Berbahagia Datuk Dr. Mohd Azman bin Yacob, Timbalan Ketua Pengarah Kesihatan (Perubatan) KKM dan Yang Berusaha, Dr. Nor Hayati binti Ibrahim, Pengarah Bahagian Perkembangan Perubatan KKM."</p>
+          <p>"Terima kasih di atas kesudian bersama kami melakar memori manis pada malam yang serba gemilang ini."</p>
+        </div>
+      </div>
+
+      <!-- Script for Slide 12 -->
+      <div class="script-section p-3.5 rounded-xl border border-zinc-800 bg-zinc-900/60" data-slide="11">
+        <div class="flex items-center justify-between text-xs text-yellow-400 font-bold mb-1">
+          <span>SLIDE 12: PENUTUP & FOTOGRAFI</span>
+          <button onclick="jumpToSlide(11)" class="text-gray-400 hover:text-yellow-400 text-[10px]">Pergi ke Slide</button>
+        </div>
+        <p class="text-xs text-gray-400 italic mb-2">CUE: Selesai acara formal, panggil semua warga naik ke pentas.</p>
+        <div class="space-y-2 text-xs">
+          <p><strong>Emcee:</strong> "Dengan ini berakhirlah sudah atur cara rasmi Malam Gala Hard Rock CaPRiSK 2026! Namun sebelum kita pulang, dipersilakan semua hadirin tanpa terkecuali untuk bersama-sama ke pentas bagi sesi fotografi kenang-kenangan yang paling epik!"</p>
+          <div class="p-2 rounded bg-black/40 border-l-2 border-yellow-500 italic text-yellow-200">
+            "Tenang air di Janda Baik,<br>
+            Udara dingin nyaman sekali;<br>
+            Budi dan tawa dibalas baik,<br>
+            Tahun hadapan kita bersua lagi!"
+          </div>
+          <p>"Terima kasih semua, Rock on CaPRiSK dan hati-hati memandu pulang!"</p>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- WINNER EDIT / REVEAL MODAL -->
+  <div id="winnerModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-yellow-500/50 rounded-2xl p-6 max-w-md w-full shadow-2xl text-left">
+      <div class="flex justify-between items-center mb-4 border-b border-zinc-800 pb-2">
+        <h3 id="modalTitle" class="text-lg font-bold font-rock text-yellow-400 uppercase">Tetapkan Pemenang</h3>
+        <button onclick="closeWinnerModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <p class="text-xs text-gray-400 mb-3" id="modalDesc">Masukkan nama penerima trofi untuk dipaparkan secara langsung di skrin pentas.</p>
+      <input type="text" id="winnerInputName" class="w-full bg-black border border-zinc-700 rounded-lg p-2.5 text-white font-semibold text-sm focus:border-yellow-400 focus:outline-none mb-4" placeholder="Nama Penuh Pemenang">
+      
+      <div class="flex justify-end space-x-2">
+        <button onclick="closeWinnerModal()" class="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-gray-300 rounded-lg text-xs font-semibold">Batal</button>
+        <button onclick="saveWinnerReveal()" class="px-5 py-2 bg-yellow-500 hover:bg-yellow-400 text-black font-rock font-bold rounded-lg text-xs">Simpan & Buka Tirai</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEYBOARD SHORTCUTS HELP MODAL -->
+  <div id="helpModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-6 max-w-md w-full shadow-2xl text-left">
+      <div class="flex justify-between items-center mb-4 border-b border-zinc-800 pb-2">
+        <h3 class="text-base font-bold text-white uppercase"><i class="fa-solid fa-keyboard mr-2 text-yellow-400"></i>Pintasan Papan Kekunci</h3>
+        <button onclick="closeHelpModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">➡</kbd> / <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">Space</kbd>
+          <span class="block text-gray-400 mt-1">Slide Seterusnya</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">⬅️</kbd>
+          <span class="block text-gray-400 mt-1">Slide Sebelumnya</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">+</kbd> / <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">-</kbd>
+          <span class="block text-gray-400 mt-1">Zoom In / Zoom Out (95%+)</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">0</kbd>
+          <span class="block text-gray-400 mt-1">Set Semula Zoom (100%)</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">D</kbd>
+          <span class="block text-gray-400 mt-1">SFX Drum Roll</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">R</kbd> / <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">G</kbd>
+          <span class="block text-gray-400 mt-1">SFX Guitar Riff</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">A</kbd> / <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">S</kbd>
+          <span class="block text-gray-400 mt-1">SFX Sorak / Applause</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">M</kbd>
+          <span class="block text-gray-400 mt-1">Buka Teks Emcee</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">F</kbd>
+          <span class="block text-gray-400 mt-1">Mod Skrin Penuh</span>
+        </div>
+        <div class="p-2 bg-zinc-950 rounded border border-zinc-800">
+          <kbd class="bg-zinc-800 px-1.5 py-0.5 rounded text-yellow-400">C</kbd>
+          <span class="block text-gray-400 mt-1">Letupkan Konfeti</span>
+        </div>
+      </div>
+      <div class="mt-4 text-right">
+        <button onclick="closeHelpModal()" class="px-4 py-1.5 bg-yellow-500 text-black font-bold text-xs rounded-lg">Faham</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Slide Metadata Definition
+    const slidesData = [
+      { id: 'slide-0', title: 'Backdrop Utama' },
+      { id: 'slide-1', title: 'Atur Cara Majlis' },
+      { id: 'slide-2', title: 'Ketibaan VVIP & Aluan' },
+      { id: 'slide-3', title: 'Sanjungan Budi: Matron Normala' },
+      { id: 'slide-4', title: 'Sambutan Hari Jadi (Jul-Dis)' },
+      { id: 'slide-5', title: 'Doa Makan & Jamuan' },
+      { id: 'slide-6', title: 'Anugerah 1: Sporting Event' },
+      { id: 'slide-7', title: 'Anugerah 2: Hard Rock Underdog' },
+      { id: 'slide-8', title: 'Anugerah 3: King & Queen' },
+      { id: 'slide-9', title: 'Anugerah 4: Star of CaPRiSK' },
+      { id: 'slide-10', title: 'Cenderahati VVIP' },
+      { id: 'slide-11', title: 'Penutup & Sesi Bergambar' }
+    ];
+
+    let currentSlide = 0;
+    const totalSlides = slidesData.length;
+    let currentTargetReveal = null;
+
+    let currentZoom = 1.0;
+    const MIN_ZOOM = 0.8;
+    const MAX_ZOOM = 1.5;
+    const ZOOM_STEP = 0.05;
+
+    function applyZoom() {
+      const viewport = document.getElementById('slideViewport');
+      const zoomLabel = document.getElementById('zoomLabel');
+      if (viewport) {
+        viewport.style.transform = `scale(${currentZoom})`;
+      }
+      if (zoomLabel) {
+        zoomLabel.innerText = `${Math.round(currentZoom * 100)}%`;
+      }
+    }
+
+    function zoomIn() {
+      if (currentZoom < MAX_ZOOM) {
+        currentZoom = Math.min(MAX_ZOOM, +(currentZoom + ZOOM_STEP).toFixed(2));
+        applyZoom();
+      }
+    }
+
+    function zoomOut() {
+      if (currentZoom > MIN_ZOOM) {
+        currentZoom = Math.max(MIN_ZOOM, +(currentZoom - ZOOM_STEP).toFixed(2));
+        applyZoom();
+      }
+    }
+
+    function resetZoom() {
+      currentZoom = 1.0;
+      applyZoom();
+    }
+
+    // SFX Audio Elements from External Links with Web Audio Synth Fallback
+    const sfxAudioMap = {
+      rockRiff: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/start.ogg',
+      cheer: 'https://bigsoundbank.com/UPLOAD/ogg/2363.ogg',
+      drumroll: 'https://bigsoundbank.com/UPLOAD/ogg/2402.ogg'
+    };
+
+    const audioCache = {};
+
+    // Web Audio Synthesizer for instant Rock SFX (Fallback)
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // Main SFX Trigger: Plays custom sound links first, falls back to Web Audio synth if offline or blocked
+    function playSFX(type) {
+      try {
+        const audioUrl = sfxAudioMap[type];
+        if (audioUrl) {
+          if (!audioCache[type]) {
+            audioCache[type] = new Audio(audioUrl);
+            audioCache[type].preload = 'auto';
+          }
+          const sound = audioCache[type];
+          sound.currentTime = 0;
+          const playPromise = sound.play();
+          if (playPromise !== undefined) {
+            playPromise.catch((err) => {
+              console.warn(`URL audio failed or blocked for "${type}", falling back to synth:`, err);
+              playSynthSFX(type);
+            });
+          }
+          return;
+        }
+      } catch (e) {
+        console.warn('Audio playback error, falling back to synth:', e);
+      }
+      playSynthSFX(type);
+    }
+
+    // Audio SFX Synthesizer (Fallback Engine)
+    function playSynthSFX(type) {
+      try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+
+        if (type === 'drumroll') {
+          // Snare roll simulation using noise buffer and gain burst
+          const bufferSize = ctx.sampleRate * 2.2;
+          const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 2 - 1;
+          }
+          const noise = ctx.createBufferSource();
+          noise.buffer = buffer;
+
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'highpass';
+          filter.frequency.value = 800;
+
+          const gain = ctx.createGain();
+          gain.gain.setValueAtTime(0.05, now);
+          gain.gain.exponentialRampToValueAtTime(0.4, now + 1.8);
+          gain.gain.setValueAtTime(0.8, now + 1.85);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 2.2);
+
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(ctx.destination);
+          noise.start(now);
+        } else if (type === 'rockRiff') {
+          // Power chord emulation: Root, 5th, Octave with distortion
+          const freqs = [146.83, 220.0, 293.66]; // D3, A3, D4
+          freqs.forEach((f) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(f, now);
+            osc.frequency.exponentialRampToValueAtTime(f * 1.05, now + 0.1);
+            osc.frequency.exponentialRampToValueAtTime(f, now + 0.3);
+
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(now);
+            osc.stop(now + 1.5);
+          });
+        } else if (type === 'cheer') {
+          // Crowd cheering noise burst
+          const bufferSize = ctx.sampleRate * 2.5;
+          const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 2 - 1;
+          }
+          const noise = ctx.createBufferSource();
+          noise.buffer = buffer;
+
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.value = 1100;
+          filter.Q.value = 1.2;
+
+          const gain = ctx.createGain();
+          gain.gain.setValueAtTime(0.01, now);
+          gain.gain.linearRampToValueAtTime(0.25, now + 0.4);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 2.5);
+
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(ctx.destination);
+          noise.start(now);
+        }
+      } catch (e) {
+        console.warn('Audio synthesis not supported or blocked:', e);
+      }
+    }
+
+    // Function to Generate and Download the Complete Emcee Script in DOCX Format
+    function downloadEmceeDocx() {
+      // Build a well-formatted HTML document specifically structured for Microsoft Word / LibreOffice
+      const docHtml = `
+<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+  <meta charset="utf-8">
+  <title>Teks Pengacara Majlis - Malam Gala Hard Rock CaPRiSK 2026</title>
+  <style>
+    body {
+      font-family: 'Calibri', 'Arial', sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #111111;
+      margin: 1.5cm;
+    }
+    h1 {
+      font-size: 20pt;
+      color: #990000;
+      text-align: center;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 14pt;
+      color: #B45309;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .header-box {
+      background-color: #f7f7f7;
+      border: 1px solid #cccccc;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    h3 {
+      font-size: 13pt;
+      color: #990000;
+      border-bottom: 2px solid #D97706;
+      padding-bottom: 4px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .cue {
+      font-style: italic;
+      color: #555555;
+      background-color: #f0f4f8;
+      border-left: 4px solid #0284c7;
+      padding: 6px 10px;
+      margin-bottom: 10px;
+      font-size: 10pt;
+    }
+    .pantun {
+      background-color: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 8px 12px;
+      margin: 10px 0;
+      font-style: italic;
+      color: #78350f;
+    }
+    .award-item {
+      margin-bottom: 8px;
+      padding-left: 15px;
+    }
+    .emcee-speak {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1>MALAM GALA HARD ROCK CaPRiSK 2026</h1>
+  <h2>TEKS PENGACARA MAJLIS (EMCEE SCRIPT)</h2>
+  
+  <div class="header-box">
+    <strong>Tarikh:</strong> Jumaat, 2 Oktober 2026 &nbsp;|&nbsp; 
+    <strong>Tempat:</strong> Royale Bintang, Janda Baik &nbsp;|&nbsp; 
+    <strong>Tema:</strong> Hard Rock Glam
+  </div>
+
+  <!-- SLIDE 1 -->
+  <h3>SEGMEN 1: PRA-MAJLIS & KETIBAAN TETAMU (SLIDE 1)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Muzik instrumental Hard Rock berkumandang. Tetamu sedang berkumpul, mendaftar & bergambar di photo booth.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Testing 1, 2, 3... Rockers semua sihat ke tu?! Selamat petang dan salam sejahtera kepada seluruh warga CaPRiSK yang amat saya kasihi dan banggakan! Wah, tengok busana masing-masing malam ini... ada <em>leather jacket</em>, bandana, rantai chrome, boots berkilat... memang gah dan luar biasa tema Hard Rock kita di Royale Bintang, Janda Baik malam ni!"</p>
+  </div>
+  <div class="pantun">
+    "Bukan sebarang muzik digubah,<br>
+    Alunan rock menggegarkan dewan;<br>
+    Malam Gala CaPRiSK penuh meriah,<br>
+    Wajah berseri semua rakan taulan!"
+  </div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Dipersilakan hadirin sekalian mengambil tempat duduk masing-masing, nikmati minuman aluan, dan jangan lupa mengabadikan memori di sudut photo booth rasmi kita!"</p>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <h3>SEGMEN 2: ATUR CARA MAJLIS & HIGHLIGHT MALAM (SLIDE 2)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Paparkan atur cara ringkas pada skrin dewan.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Hadirin sekalian, malam ini kita ada barisan acara yang cukup padat, santai dan pastinya mengujakan! Bermula dengan menyambut ketibaan tetamu kehormat VVIP, kita akan meraikan segmen sanjungan budi persaraan insan tersayang kita iaitu Matron Normala binti Salim, sambutan hari jadi warga CaPRiSK kelahiran Julai hingga Disember, bacaan doa makan oleh En. Sahaludin bin Sharif, dan sepanjang makan malam nanti, kita bawakan 4 sesi anugerah!"</p>
+    <p><strong>Emcee:</strong> "Kita ada 7 anugerah istimewa Hard Rock Underdog Edition, 4 hamper gergasi Sporting Event, 2 trofi rebutan King & Queen of the Night, dan kemuncak yang paling mendebarkan... Bintang Utama, <em>Star of CaPRiSK</em>! Jadi duduk tenang, nikmati muzik dan hayati setiap detik malam ini!"</p>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <h3>SEGMEN 3: KETIBAAN TETAMU KEHORMAT VVIP (SLIDE 3)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> VVIP melangkah masuk ke dalam dewan. Muzik perarakan / riff rock berbunyi rancak.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee (Protokol Santai):</strong> "Mengumumkan ketibaan Yang Berbahagia Datuk Dr. Mohd Azman bin Yacob, Timbalan Ketua Pengarah Kesihatan (Perubatan) Kementerian Kesihatan Malaysia, bersama Yang Berusaha Dr. Nor Hayati binti Ibrahim, Pengarah Bahagian Perkembangan Perubatan Kementerian Kesihatan Malaysia melangkah masuk ke dalam dewan!"</p>
+  </div>
+  <div class="pantun">
+    "Daun pandan disimpul kemas,<br>
+    Harum baunya semerbak desa;<br>
+    Tetamu kehormat hadir beralas emas,<br>
+    Sambutlah salam penuh mesra."
+  </div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Bagi pihak seluruh warga CaPRiSK, kami merakamkan setinggi-tinggi penghargaan dan ucapan selamat datang ke Royale Bintang, Janda Baik!"</p>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <h3>SEGMEN 4: MAJLIS SANJUNGAN BUDI - MATRON NORMALA BINTI SALIM (SLIDE 4)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Suasana penuh rasa hormat, syahdu dan penghargaan. Matron Normala dijemput ke pentas.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Sidang hadirin yang dimuliakan, ada pertemuan pastinya ada perpisahan, namun jasa yang ditabur akan kekal terpahat di lubuk sanubari. Majlis dengan penuh takzim membawakan segmen <em>Sanjungan Budi: Jasamu Abadi</em> khas buat insan tersayang kita, <strong>Matron Normala binti Salim</strong> sempena persaraan beliau."</p>
+  </div>
+  <div class="pantun">
+    "Tuai padi antara masak,<br>
+    Esok jangan layu-layuan;<br>
+    Budi Matron terpahat kemas,<br>
+    Sentiasa jadi ingatan zaman."
+  </div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Dipersilakan Matron Normala naik ke hadapan pentas untuk menerima tanda ingatan kasih:</p>
+    <ul>
+      <li>Pertama: Hadiah kenang-kenangan daripada Kelab Kebajikan CaPRiSK</li>
+      <li>Kedua: Cenderahati penghargaan daripada Unit CaPRiSK</li>
+      <li>Ketiga: Tanda kasih tulus daripada seluruh barisan Jururawat</li>
+    </ul>
+    <p>Terima kasih Matron Normala atas segala bimbingan, ketulusan dan curahan keringat yang dicurahkan sepanjang tempoh perkhidmatan!"</p>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <h3>SEGMEN 5: SAMBUTAN HARI JADI (JULAI - DISEMBER) (SLIDE 5)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Beat muzik ceria, lagu Happy Birthday versi rock dimainkan. Konfeti diletupkan.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Dari rasa sebak, kita sambung pula dengan kebahagiaan! Kepada sesiapa yang menyambut hari lahir antara bulan Julai hingga Disember... angkat tangan tinggi-tinggi! Malam ini kita raikan anda semua dalam satu pentas Rock Birthday Bash!"</p>
+    <p><strong>Emcee:</strong> "Dipersilakan semua 'birthday stars' CaPRiSK kelahiran Julai hingga Disember untuk naik ke pentas bagi sesi pemberian cenderahati eksklusif, upacara memotong kek bersama-sama, dan sesi fotografi!"</p>
+    <p><em>(Emcee mengajak seluruh dewan menyanyikan lagu Selamat Hari Jadi beramai-ramai)</em></p>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <h3>SEGMEN 6: BACAAN DOA MAKAN & JAMUAN BERMULA (SLIDE 6)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Suasana dewan tenang untuk bacaan doa makan.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Aroma lazat hidangan Royale Bintang dari tadi dah buat perut berbunyi solo drum kit! Namun sebelum kita menjamah selera, marilah kita menadah tangan memohon keberkatan dan kelapangan rezeki daripada Yang Maha Esa."</p>
+    <p><strong>Emcee:</strong> "Majlis dengan sukacitanya mempersilakan <strong>Encik Sahaludin bin Sharif</strong> untuk memimpin bacaan doa makan. Dipersilakan."</p>
+    <p><em>(Selepas selesai bacaan doa):</em></p>
+    <p><strong>Emcee:</strong> "Amin Ya Rabbal Alamin. Terima kasih Encik Sahaludin. Selamat menjamu selera semua warga rockers CaPRiSK! Teruskan menikmati santapan sambil bersedia untuk sesi anugerah seterusnya!"</p>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <h3>SEGMEN 7: ANUGERAH SESI 1 - SPORTING EVENT (SLIDE 7)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Semasa para hadirin menjamu selera. Suasana rancak dan ceria.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Sambil mulut mengunyah hidangan lazat, mata kita tumpukan ke hadapan pentas! Tiba masanya untuk <strong>Sesi Anugerah Pertama: Pemenang Acara Sukan (Sporting Event)</strong>!"</p>
+    <p><strong>Emcee:</strong> "Sebanyak 4 buah hamper gergasi yang penuh dengan goodies menanti para jaguh kesukanan CaPRiSK yang telah berhempas-pulas menunjukkan ketangkasan dan semangat kesukanan tinggi! Mari kita umumkan:"</p>
+    <ul>
+      <li>Juara: Hamper Gergasi Emas</li>
+      <li>Naib Juara: Hamper Perak</li>
+      <li>Tempat Ke-3: Hamper Gangsa</li>
+      <li>Pasukan Paling Sporting: Hamper Semangat Kental</li>
+    </ul>
+    <p><em>(Panggil wakil pemenang untuk menerima hamper di atas pentas)</em></p>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <h3>SEGMEN 8: ANUGERAH SESI 2 - HARD ROCK UNDERDOG EDITION (SLIDE 8)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Baca setiap nama dan ulasan gelaran dengan penuh penghayatan, bangga dan gaya rockstar!</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Hadirin sekalian, ini antara anugerah paling bererti malam ini: <strong>Anugerah Khas Hard Rock Underdog Edition</strong>! Pengiktirafan kepada tulang belakang yang jarang menuntut mikrofon, tetapi tanpanya konsert ini tidak akan mampu bergegar!"</p>
+    
+    <div class="award-item">
+      <strong>1. DR. ZULAIKA BINTI ZOLKIPLI</strong> – <em>The Unsung Lead Guitarist</em><br>
+      "Steady, berimpak tinggi, dan sentiasa memberikan persembahan 'solo' yang mantap di balik tabir tanpa perlu terjerit-jerit menuntut perhatian."
+    </div>
+    <div class="award-item">
+      <strong>2. PN. SAIZA BINTI MAT YUSOF</strong> – <em>The Rhythm Section Icon</em><br>
+      "Nadi yang mengekalkan tempo pejabat. Tanpa bunyi bising, beliau memastikan kualiti kerja sentiasa in-sync dan tidak pernah terbabas."
+    </div>
+    <div class="award-item">
+      <strong>3. DR. CHAN LEE FANG</strong> – <em>The Backstage Virtuoso</em><br>
+      "Pakar strategi senyap. Kepakaran dan ketelitian beliau adalah 'magis' sebenar yang membuatkan setiap projek berjalan lancar."
+    </div>
+    <div class="award-item">
+      <strong>4. EN. MOHD. SHAHIDI BIN MUHAMMAD YUSOF</strong> – <em>The Iron Bassist</em><br>
+      "Kunci kestabilan pasukan. Sentiasa tenang menghadapi tekanan dan menjadi tulang belakang yang mengukuhkan asas kerja setiap hari."
+    </div>
+    <div class="award-item">
+      <strong>5. EN. SAHALUDIN BIN SHARIF</strong> – <em>The Acoustic Powerhouse</em><br>
+      "Rendah diri tetapi penuh tenaga. Kerja keras beliau tidak selalu dipromosikan, tetapi hasilnya sentiasa memberikan impak mendalam kepada pasukan."
+    </div>
+    <div class="award-item">
+      <strong>6. EN. MOHD ROMZA BIN HASSAN</strong> – <em>The Master Sound Engineer</em><br>
+      "Pengawal keadaan yang efisien. Beliau menyelesaikan pelbagai masalah teknikal dan operasi di belakang tabir sebelum orang lain sempat menyedarinya."
+    </div>
+    <div class="award-item">
+      <strong>7. EN. AHMAD FAUZI BIN MANSOR</strong> – <em>The Heavy Metal Anchor</em><br>
+      "Tahan lasak dan tidak pernah mengeluh. Sentiasa bersedia menggalas tugasan paling berat dengan dedikasi tinggi demi kejayaan bersama."
+    </div>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <h3>SEGMEN 9: ANUGERAH SESI 3 - KING & QUEEN OF THE NIGHT (SLIDE 9)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Cipta suspen! Tekan butang SFX Drum Roll sebelum mengumumkan nama pemenang.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Siapa yang paling rock, paling stailo, paling menonjol aura bintangnya malam ini?! Kita ada dua trofi khas buat <strong>King of the Night</strong> dan <strong>Queen of the Night</strong>!"</p>
+  </div>
+  <div class="pantun">
+    "Berbaju kulit berantai tembaga,<br>
+    Gaya melangkah umpama diva;<br>
+    King dan Queen kita cari bersama,<br>
+    Siapakah gerangan yang bakal bertakhta?"
+  </div>
+  <div class="emcee-speak">
+    <p><em>(Bunyikan drumroll...)</em></p>
+    <p><strong>Emcee:</strong> "Pemenang KING OF THE NIGHT disandang oleh... [Sila sebut nama]! Dan pemenang QUEEN OF THE NIGHT dimenangi oleh... [Sila sebut nama]! Dipersilakan kedua-duanya ke atas pentas!"</p>
+  </div>
+
+  <!-- SLIDE 10 -->
+  <h3>SEGMEN 10: ANUGERAH SESI 4 - STAR OF CAPRISK (SLIDE 10)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Kemuncak tertinggi majlis! Lampu spotlight pentas bertumpu ke skrin. Bunyikan drumroll dan guitar riff!</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Inilah detik kemuncak yang paling dinanti-nantikan! The Ultimate Legend of CaPRiSK 2026... anugerah <strong>STAR OF CaPRiSK</strong>!"</p>
+    <p><strong>Emcee:</strong> "Anugerah ini diberikan sebagai penghargaan tertinggi kepada insan yang sentiasa berjiwa besar, berdedikasi tanpa batas, disayangi semua dan menyinari setiap langkah kejayaan CaPRiSK!"</p>
+    <p><em>(Drumroll panjang...)</em></p>
+    <p><strong>Emcee:</strong> "Dan penerima anugerah terulung STAR OF CaPRiSK 2026 jatuh kepada... [Buka Tirai Skrin & Sebut Nama Pemenang]! Tahniah dan teruskan menyinari CaPRiSK!"</p>
+  </div>
+
+  <!-- SLIDE 11 -->
+  <h3>SEGMEN 11: PENYAMPAIAN CENDERAHATI VVIP (SLIDE 11)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Protokol penyerahan cenderahati penghargaan kepada Timbalan Ketua Pengarah & Pengarah.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Sebagai tanda setinggi-tinggi penghargaan dan terima kasih yang tidak terhingga, majlis dengan sukacitanya mempersilakan wakil kepimpinan CaPRiSK untuk menyampaikan cenderahati kenang-kenangan kepada:</p>
+    <ul>
+      <li>Yang Berbahagia Datuk Dr. Mohd Azman bin Yacob, Timbalan Ketua Pengarah Kesihatan (Perubatan) KKM</li>
+      <li>Yang Berusaha Dr. Nor Hayati binti Ibrahim, Pengarah Bahagian Perkembangan Perubatan KKM</li>
+    </ul>
+    <p>Terima kasih daun keladi, atas kesudian bersama-sama kami mencoretkan sejarah indah pada Malam Gala Hard Rock CaPRiSK 2026 ini."</p>
+  </div>
+
+  <!-- SLIDE 12 -->
+  <h3>SEGMEN 12: PENUTUP & SESI BERGAMBAR BERAMAI-RAMAI (SLIDE 12)</h3>
+  <div class="cue"><strong>[CUE / ARAHAN]:</strong> Selesai acara pentas rasmi, jemput semua hadirin dan VVIP ke hadapan pentas untuk gambar mega.</div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Dengan ini berakhirlah sudah atur cara rasmi Malam Gala Hard Rock CaPRiSK 2026! Namun memori indah ini tidak akan lengkap tanpa potret kenangan kita bersama!"</p>
+    <p><strong>Emcee:</strong> "Dipersilakan Yang Berbahagia Datuk, Yang Berusaha Doktor, seluruh ketua unit dan semua rakan sekerja CaPRiSK tanpa terkecuali untuk bersama-sama ke pentas utama bagi sesi fotografi kenang-kenangan yang paling epik!"</p>
+  </div>
+  <div class="pantun">
+    "Tenang air di Janda Baik,<br>
+    Udara dingin nyaman sekali;<br>
+    Budi dan tawa dibalas baik,<br>
+    Tahun hadapan kita bersua lagi!"
+  </div>
+  <div class="emcee-speak">
+    <p><strong>Emcee:</strong> "Terima kasih semua, selamat malam, pandu berhati-hati pulang dan ROCK ON CaPRiSK!"</p>
+  </div>
+</body>
+</html>
+      `;
+
+      // Export using htmlDocx library if available, else download as standard Word-formatted document
+      try {
+        if (window.htmlDocx && typeof window.htmlDocx.asBlob === 'function') {
+          const docxBlob = window.htmlDocx.asBlob(docHtml, {
+            orientation: 'portrait',
+            margins: { top: 1440, right: 1440, bottom: 1440, left: 1440 }
+          });
+          const url = URL.createObjectURL(docxBlob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'Teks_Emcee_Malam_Gala_Hard_Rock_CaPRiSK_2026.docx';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+          return;
+        }
+      } catch (e) {
+        console.warn('htmlDocx export error, using Word XML fallback:', e);
+      }
+
+      // Fallback: Word HTML MIME type blob with .docx / .doc extension
+      const blob = new Blob(['\ufeff' + docHtml], { type: 'application/vnd.ms-word;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Teks_Emcee_Malam_Gala_Hard_Rock_CaPRiSK_2026.docx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    // Slide Engine Functions
+    function updateSlide() {
+      // Hide all slides
+      slidesData.forEach((s, idx) => {
+        const el = document.getElementById(s.id);
+        if (el) {
+          if (idx === currentSlide) {
+            el.classList.remove('hidden');
+            el.classList.add('slide-enter');
+          } else {
+            el.classList.add('hidden');
+            el.classList.remove('slide-enter');
+          }
+        }
+      });
+
+      // Update HUD Labels
+      document.getElementById('slideIndexLabel').innerText = `Slide ${currentSlide + 1} / ${totalSlides}`;
+      document.getElementById('currentSlideTitle').innerText = slidesData[currentSlide].title;
+      
+      const select = document.getElementById('slideJumpSelect');
+      if (select) select.value = currentSlide;
+
+      // Update dots
+      renderDots();
+
+      // Highlight corresponding Emcee Script section
+      highlightEmceeScript(currentSlide);
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function jumpToSlide(index) {
+      if (index >= 0 && index < totalSlides) {
+        currentSlide = index;
+        updateSlide();
+      }
+    }
+
+    // Render Navigation Dots
+    function renderDots() {
+      const container = document.getElementById('slideDotsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = `w-2 h-2 rounded-full transition-all ${i === currentSlide ? 'w-5 bg-yellow-400' : 'bg-zinc-700 hover:bg-zinc-500'}`;
+        dot.title = slidesData[i].title;
+        dot.onclick = () => jumpToSlide(i);
+        container.appendChild(dot);
+      }
+    }
+
+    // Populate Slide Jump Select Dropdown
+    function initDropdown() {
+      const select = document.getElementById('slideJumpSelect');
+      if (!select) return;
+      select.innerHTML = '';
+      slidesData.forEach((s, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.innerText = `${idx + 1}. ${s.title}`;
+        select.appendChild(opt);
+      });
+    }
+
+    // Emcee Drawer Toggle
+    function toggleEmceeDrawer() {
+      const drawer = document.getElementById('emceeDrawer');
+      if (drawer) {
+        drawer.classList.toggle('translate-x-full');
+      }
+    }
+
+    function highlightEmceeScript(slideIdx) {
+      const sections = document.querySelectorAll('.script-section');
+      sections.forEach(sec => {
+        const idx = parseInt(sec.getAttribute('data-slide'));
+        if (idx === slideIdx) {
+          sec.classList.add('border-yellow-500', 'bg-zinc-800/90', 'ring-1', 'ring-yellow-500/50');
+          sec.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          sec.classList.remove('border-yellow-500', 'bg-zinc-800/90', 'ring-1', 'ring-yellow-500/50');
+        }
+      });
+    }
+
+    // Fullscreen Toggle
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch((err) => {
+          console.warn(`Fullscreen error: ${err.message}`);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Don't trigger if user is typing in modal
+      if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+        return;
+      }
+
+      const key = e.key.toLowerCase();
+
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === '+' || e.key === '=') {
+        e.preventDefault();
+        zoomIn();
+      } else if (e.key === '-' || e.key === '_') {
+        e.preventDefault();
+        zoomOut();
+      } else if (e.key === '0') {
+        e.preventDefault();
+        resetZoom();
+      } else if (key === 'd') {
+        playSFX('drumroll');
+      } else if (key === 'r' || key === 'g') {
+        playSFX('rockRiff');
+      } else if (key === 'a' || key === 's') {
+        playSFX('cheer');
+      } else if (key === 'm') {
+        toggleEmceeDrawer();
+      } else if (key === 'f') {
+        toggleFullscreen();
+      } else if (key === 'c') {
+        triggerConfetti();
+      } else if (e.key >= '1' && e.key <= '9') {
+        jumpToSlide(parseInt(e.key) - 1);
+      }
+    });
+
+    // Confetti Engine
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    let confettiParticles = [];
+    let confettiAnimationId = null;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function triggerConfetti() {
+      const colors = ['#f59e0b', '#ef4444', '#fde047', '#ffffff', '#ec4899', '#8b5cf6'];
+      for (let i = 0; i < 90; i++) {
+        confettiParticles.push({
+          x: window.innerWidth * 0.5 + (Math.random() * 200 - 100),
+          y: window.innerHeight * 0.3,
+          vx: (Math.random() - 0.5) * 14,
+          vy: Math.random() * -12 - 4,
+          size: Math.random() * 9 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 10,
+          opacity: 1
+        });
+      }
+      if (!confettiAnimationId) {
+        animateConfetti();
+      }
+    }
+
+    function animateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < confettiParticles.length; i++) {
+        const p = confettiParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.28; // gravity
+        p.rotation += p.rotationSpeed;
+        p.opacity -= 0.007;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.globalAlpha = Math.max(0, p.opacity);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        ctx.restore();
+      }
+
+      confettiParticles = confettiParticles.filter(p => p.opacity > 0 && p.y < window.innerHeight + 50);
+
+      if (confettiParticles.length > 0) {
+        confettiAnimationId = requestAnimationFrame(animateConfetti);
+      } else {
+        confettiAnimationId = null;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
+    // Winner Reveal Modal Handlers
+    function revealWinner(target) {
+      currentTargetReveal = target;
+      const modal = document.getElementById('winnerModal');
+      const title = document.getElementById('modalTitle');
+      const input = document.getElementById('winnerInputName');
+      
+      if (target === 'king') {
+        title.innerText = 'Tetapkan King of the Night';
+      } else if (target === 'queen') {
+        title.innerText = 'Tetapkan Queen of the Night';
+      } else if (target === 'star') {
+        title.innerText = 'Tetapkan Star of CaPRiSK';
+      }
+      
+      input.value = '';
+      modal.classList.remove('hidden');
+      setTimeout(() => input.focus(), 100);
+    }
+
+    function closeWinnerModal() {
+      document.getElementById('winnerModal').classList.add('hidden');
+    }
+
+    function saveWinnerReveal() {
+      const input = document.getElementById('winnerInputName');
+      const val = input.value.trim() || 'Nama Bakal Diumumkan';
+
+      if (currentTargetReveal === 'king') {
+        document.getElementById('kingNameDisplay').innerHTML = `
+          <div class="text-xl font-black font-rock text-yellow-300 animate-pulse tracking-wide">
+            👑 ${val.toUpperCase()} 👑
+          </div>
+        `;
+      } else if (currentTargetReveal === 'queen') {
+        document.getElementById('queenNameDisplay').innerHTML = `
+          <div class="text-xl font-black font-rock text-pink-300 animate-pulse tracking-wide">
+            💎 ${val.toUpperCase()} 💎
+          </div>
+        `;
+      } else if (currentTargetReveal === 'star') {
+        document.getElementById('starWinnerName').innerText = val.toUpperCase();
+        document.getElementById('starCapriskDisplay').classList.add('border-yellow-300', 'shadow-[0_0_30px_#f59e0b]');
+      }
+
+      closeWinnerModal();
+      playSFX('rockRiff');
+      triggerConfetti();
+    }
+
+    function openHelpModal() {
+      document.getElementById('helpModal').classList.remove('hidden');
+    }
+    function closeHelpModal() {
+      document.getElementById('helpModal').classList.add('hidden');
+    }
+
+    // Window Onload Initialization
+    window.onload = function() {
+      initDropdown();
+      updateSlide();
+    };
+  </script>
+</body>
+</html>
